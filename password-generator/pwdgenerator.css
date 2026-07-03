@@ -1,0 +1,13 @@
+body{
+    text-align:center;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: large;
+    transform: translateY(150px);
+}
+
+
+button {
+    text-align : center;
+    padding: 10px 10px;
+    background-color: rgb(38, 115, 238);
+}

@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebDev Toybox | Vanilla JS Mini-Projects Hub</title>
+    <meta name="description" content="A curated collection of 10 classic, lightweight frontend mini-projects built with HTML, CSS, and Vanilla JavaScript.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <!-- Background Elements -->
+    <div class="bg-glow bg-glow-1"></div>
+    <div class="bg-glow bg-glow-2"></div>
+    <div class="bg-glow bg-glow-3"></div>
+
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo-area">
+                    <div class="logo-icon">
+                        <i data-lucide="layers"></i>
+                    </div>
+                    <span class="logo-text">WebDev Toybox</span>
+                </div>
+                
+                <h1 class="hero-title">Vanilla JS <span>Playground</span></h1>
+                <p class="hero-subtitle">
+                    A premium collection of interactive frontend mini-projects built with pure HTML, CSS, and JavaScript. Zero frameworks, pure code.
+                </p>
+                
+                <!-- Search & Filters -->
+                <div class="search-filter-section">
+                    <div class="search-box">
+                        <i data-lucide="search" class="search-icon"></i>
+                        <input type="text" id="projectSearch" placeholder="Search projects by name or description...">
+                    </div>
+                    
+                    <div class="filter-tags">
+                        <button class="filter-btn active" data-filter="all" id="btn-filter-all">
+                            <i data-lucide="layout-grid"></i> All Projects
+                        </button>
+                        <button class="filter-btn" data-filter="utility" id="btn-filter-utility">
+                            <i data-lucide="wrench"></i> Utilities
+                        </button>
+                        <button class="filter-btn" data-filter="game" id="btn-filter-game">
+                            <i data-lucide="gamepad-2"></i> Games
+                        </button>
+                        <button class="filter-btn" data-filter="visual" id="btn-filter-visual">
+                            <i data-lucide="sparkles"></i> Visuals
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="container">
+            <div class="projects-grid" id="projectsGrid">
+                
+                <!-- Project 1: Calculator -->
+                <article class="project-card" data-category="utility" id="card-calculator">
+                    <div class="card-glow"></div>
+                    <div class="card-inner">
+                        <div class="project-header">
+                            <div class="project-icon icon-purple">
+                                <i data-lucide="calculator"></i>
+                            </div>
+                            <span class="category-badge">Utility</span>
+                        </div>
+                        <h2 class="project-title">Calculator</h2>
+                        <p class="project-desc">A clean, functional calculator supporting arithmetic operations with an elegant interactive grid interface.</p>
+                        <div class="project-tech">
+                            <span>HTML5</span>
+                            <span>CSS3</span>
+                            <span>JavaScript</span>
+                        </div>
+                        <div class="project-actions">
+                            <a href="calculator/calc.html" class="btn btn-primary" id="link-calc-run">
+                                <span>Launch App</span>
+                                <i data-lucide="arrow-up-right"></i>
+                            </a>
+                            <a href="calculator/calc-README.md" class="btn btn-secondary" id="link-calc-docs">
+                                <i data-lucide="file-text"></i> Docs
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 2: Weather Forecast -->
+                <article class="project-card" data-category="utility" id="card-weather">
+                    <div class="card-glow"></div>
+                    <div class="card-inner">
+                        <div class="project-header">
+                            <div class="project-icon icon-blue">
+                                <i data-lucide="cloud-sun"></i>
+                            </div>
+                            <span class="category-badge">Utility</span>
+                        </div>
+                        <h2 class="project-title">Weather Forecast</h2>
+                        <p class="project-desc">A real-time weather application displaying current temperature, wind speed, humidity, and forecasts for any city.</p>
+                        <div class="project-tech">
+                            <span>HTML5</span>
+                            <span>CSS3</span>
+                            <span>Weather API</span>
+                        </div>
+                        <div class="project-actions">
+                            <a href="weather-app/weather.html" class="btn btn-primary" id="link-weather-run">
+                                <span>Launch App</span>
+                                <i data-lucide="arrow-up-right"></i>
+                            </a>
+                            <a href="weather-app/README.md" class="btn btn-secondary" id="link-weather-docs">
+                                <i data-lucide="file-text"></i> Docs
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 3: Image Slider -->
+                <article class="project-card" data-category="visual" id="card-slider">
+                    <div class="card-glow"></div>
+                    <div class="card-inner">
+                        <div class="project-header">
+                            <div class="project-icon icon-green">
+                                <i data-lucide="image"></i>
+                            </div>
+                            <span class="category-badge">Visual</span>
+                        </div>
+                        <h2 class="project-title">Image Slider</h2>
+                        <p class="project-desc">A smooth, hardware-accelerated carousel image slider with transition effects and custom navigation controls.</p>
+                        <div class="project-tech">
+                            <span>HTML5</span>
+                            <span>CSS3</span>
+                            <span>Transitions</span>
+                        </div>
+                        <div class="project-actions">
+                            <a href="image-slider/imageSlider.html" class="btn btn-primary" id="link-slider-run">
+                                <span>Launch App</span>
+                                <i data-lucide="arrow-up-right"></i>
+                            </a>
+                            <a href="image-slider/README.md" class="btn btn-secondary" id="link-slider-docs">
+                                <i data-lucide="file-text"></i> Docs
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 4: Digital Clock -->
+                <article class="project-card" data-category="visual" id="card-clock">
+                    <div class="card-glow"></div>
+                    <div class="card-inner">
+                        <div class="project-header">
+                            <div class="project-icon icon-orange">
+                                <i data-lucide="clock"></i>
+                            </div>
+                            <span class="category-badge">Visual</span>
+                        </div>
+                        <h2 class="project-title">Digital Clock</h2>
+                        <p class="project-desc">A minimalist digital clock with dynamic background styling, responsive time formats, and elegant neon glowing accents.</p>
+                        <div class="project-tech">
+                            <span>HTML5</span>
+                            <span>CSS3</span>
+                            <span>Intervals</span>
+                        </div>
+                        <div class="project-actions">
+                            <a href="digital-clock/digitalclock.html" class="btn btn-primary" id="link-clock-run">
+                                <span>Launch App</span>
+                                <i data-lucide="arrow-up-right"></i>
+                            </a>
+                            <a href="digital-clock/README.md" class="btn btn-secondary" id="link-clock-docs">
+                                <i data-lucide="file-text"></i> Docs
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 5: Stopwatch -->
+                <article class="project-card" data-category="utility" id="card-stopwatch">
+                    <div class="card-glow"></div>
+                    <div class="card-inner">
+                        <div class="project-header">
+                            <div class="project-icon icon-red">
+                                <i data-lucide="timer"></i>
+                            </div>
+                            <span class="category-badge">Utility</span>
+                        </div>
+                        <h2 class="project-title">Stopwatch</h2>
+                        <p class="project-desc">A highly accurate digital stopwatch with features like split times, lap logging, pausing, and smooth reset actions.</p>
+                        <div class="project-tech">
+                            <span>HTML5</span>
+                            <span>CSS3</span>
+                            <span>Timer API</span>
+                        </div>
+                        <div class="project-actions">
+                            <a href="stopwatch/stopwatch.html" class="btn btn-primary" id="link-stopwatch-run">
+                                <span>Launch App</span>
+                                <i data-lucide="arrow-up-right"></i>
+                            </a>
+                            <a href="stopwatch/README.md" class="btn btn-secondary" id="link-stopwatch-docs">
+                                <i data-lucide="file-text"></i> Docs
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 6: Password Generator -->
+                <article class="project-card" data-category="utility" id="card-password">
+                    <div class="card-glow"></div>
+                    <div class="card-inner">
+                        <div class="project-header">
+                            <div class="project-icon icon-pink">
+                                <i data-lucide="key-round"></i>
+                            </div>
+                            <span class="category-badge">Utility</span>
+                        </div>
+                        <h2 class="project-title">Password Generator</h2>
+                        <p class="project-desc">Generate secure passwords instantly. Choose length and toggle lowercase, uppercase, numbers, and special symbols.</p>
+                        <div class="project-tech">
+                            <span>HTML5</span>
+                            <span>CSS3</span>
+                            <span>Cryptography</span>
+                        </div>
+                        <div class="project-actions">
+                            <a href="password-generator/pwdgenerator.html" class="btn btn-primary" id="link-password-run">
+                                <span>Launch App</span>
+                                <i data-lucide="arrow-up-right"></i>
+                            </a>
+                            <a href="password-generator/README.md" class="btn btn-secondary" id="link-password-docs">
+                                <i data-lucide="file-text"></i> Docs
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 7: Rock Paper Scissors -->
+                <article class="project-card" data-category="game" id="card-rps">
+                    <div class="card-glow"></div>
+                    <div class="card-inner">
+                        <div class="project-header">
+                            <div class="project-icon icon-cyan">
+                                <i data-lucide="swords"></i>
+                            </div>
+                            <span class="category-badge">Game</span>
+                        </div>
+                        <h2 class="project-title">Rock Paper Scissors</h2>
+                        <p class="project-desc">Play the timeless hand game against the CPU. Features clean interactive buttons and real-time score keeping.</p>
+                        <div class="project-tech">
+                            <span>HTML5</span>
+                            <span>CSS3</span>
+                            <span>Game Logic</span>
+                        </div>
+                        <div class="project-actions">
+                            <a href="rock-paper-scissors/rps.html" class="btn btn-primary" id="link-rps-run">
+                                <span>Launch App</span>
+                                <i data-lucide="arrow-up-right"></i>
+                            </a>
+                            <a href="rock-paper-scissors/README.md" class="btn btn-secondary" id="link-rps-docs">
+                                <i data-lucide="file-text"></i> Docs
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 8: Temperature Converter -->
+                <article class="project-card" data-category="utility" id="card-temp">
+                    <div class="card-glow"></div>
+                    <div class="card-inner">
+                        <div class="project-header">
+                            <div class="project-icon icon-yellow">
+                                <i data-lucide="thermometer"></i>
+                            </div>
+                            <span class="category-badge">Utility</span>
+                        </div>
+                        <h2 class="project-title">Temp Converter</h2>
+                        <p class="project-desc">Quickly convert temperature values between Celsius, Fahrenheit, and Kelvin scales in real-time as you type.</p>
+                        <div class="project-tech">
+                            <span>HTML5</span>
+                            <span>CSS3</span>
+                            <span>Unit Conversion</span>
+                        </div>
+                        <div class="project-actions">
+                            <a href="temperature-converter/temp.html" class="btn btn-primary" id="link-temp-run">
+                                <span>Launch App</span>
+                                <i data-lucide="arrow-up-right"></i>
+                            </a>
+                            <a href="temperature-converter/README.md" class="btn btn-secondary" id="link-temp-docs">
+                                <i data-lucide="file-text"></i> Docs
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 9: Dice Roller -->
+                <article class="project-card" data-category="game" id="card-dice">
+                    <div class="card-glow"></div>
+                    <div class="card-inner">
+                        <div class="project-header">
+                            <div class="project-icon icon-indigo">
+                                <i data-lucide="dices"></i>
+                            </div>
+                            <span class="category-badge">Game</span>
+                        </div>
+                        <h2 class="project-title">Dice Roller</h2>
+                        <p class="project-desc">Simulate rolling multiple 6-sided dice at once. Features dynamic images and summary calculations for games.</p>
+                        <div class="project-tech">
+                            <span>HTML5</span>
+                            <span>CSS3</span>
+                            <span>Math Random</span>
+                        </div>
+                        <div class="project-actions">
+                            <a href="dice-roller/dice.html" class="btn btn-primary" id="link-dice-run">
+                                <span>Launch App</span>
+                                <i data-lucide="arrow-up-right"></i>
+                            </a>
+                            <a href="dice-roller/README.md" class="btn btn-secondary" id="link-dice-docs">
+                                <i data-lucide="file-text"></i> Docs
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 10: Counter -->
+                <article class="project-card" data-category="utility" id="card-counter">
+                    <div class="card-glow"></div>
+                    <div class="card-inner">
+                        <div class="project-header">
+                            <div class="project-icon icon-teal">
+                                <i data-lucide="hash"></i>
+                            </div>
+                            <span class="category-badge">Utility</span>
+                        </div>
+                        <h2 class="project-title">Simple Counter</h2>
+                        <p class="project-desc">A simple, stylish click counter with controls to increase, decrease, or reset values instantly.</p>
+                        <div class="project-tech">
+                            <span>HTML5</span>
+                            <span>CSS3</span>
+                            <span>State Management</span>
+                        </div>
+                        <div class="project-actions">
+                            <a href="counter/counter.html" class="btn btn-primary" id="link-counter-run">
+                                <span>Launch App</span>
+                                <i data-lucide="arrow-up-right"></i>
+                            </a>
+                            <a href="counter/README.md" class="btn btn-secondary" id="link-counter-docs">
+                                <i data-lucide="file-text"></i> Docs
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+            
+            <!-- Empty state -->
+            <div class="empty-state" id="emptyState">
+                <i data-lucide="search-code" class="empty-icon"></i>
+                <h3>No projects found</h3>
+                <p>We couldn't find any projects matching your search term. Try adjusting your search.</p>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p class="footer-text">
+                    &copy; 2026 WebDev Toybox. Crafted with <i data-lucide="heart" class="heart-icon"></i> by <a href="https://github.com/HarishNarasimhanK" target="_blank">Harish Narasimhan K</a>.
+                </p>
+                <div class="footer-links">
+                    <a href="https://github.com/HarishNarasimhanK" target="_blank" class="footer-link">
+                        <i data-lucide="github"></i> GitHub
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Interactive Logic -->
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // DOM Elements
+        const searchInput = document.getElementById('projectSearch');
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const projectCards = document.querySelectorAll('.project-card');
+        const emptyState = document.getElementById('emptyState');
+        
+        let currentFilter = 'all';
+        let searchQuery = '';
+
+        // Filter & Search Logic
+        function updateDisplay() {
+            let visibleCount = 0;
+            
+            projectCards.forEach(card => {
+                const title = card.querySelector('.project-title').textContent.toLowerCase();
+                const desc = card.querySelector('.project-desc').textContent.toLowerCase();
+                const category = card.getAttribute('data-category');
+                
+                const matchesFilter = (currentFilter === 'all' || category === currentFilter);
+                const matchesSearch = (title.includes(searchQuery) || desc.includes(searchQuery));
+                
+                if (matchesFilter && matchesSearch) {
+                    card.style.display = 'block';
+                    card.style.animation = 'fadeIn 0.4s ease forwards';
+                    visibleCount++;
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+
+            if (visibleCount === 0) {
+                emptyState.style.display = 'flex';
+            } else {
+                emptyState.style.display = 'none';
+            }
+        }
+
+        // Event Listeners
+        searchInput.addEventListener('input', (e) => {
+            searchQuery = e.target.value.toLowerCase().trim();
+            updateDisplay();
+        });
+
+        filterButtons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                filterButtons.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                currentFilter = btn.getAttribute('data-filter');
+                updateDisplay();
+            });
+        });
+    </script>
+</body>
+</html>

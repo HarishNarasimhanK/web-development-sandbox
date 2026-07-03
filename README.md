@@ -1,58 +1,57 @@
-# Simple Calculator
+# 🚀 WebDev Toybox (Vanilla JS Playground)
 
-This project is a **Simple Calculator** built using HTML, CSS, and JavaScript. It provides basic arithmetic operations such as addition, subtraction, multiplication, and division. The calculator features an intuitive and user-friendly interface.
+Welcome to the **WebDev Toybox**! This repository is a consolidated hub of 10 interactive, lightweight frontend mini-applications. They are built using standard, framework-free web technology: **HTML5**, **CSS3**, and **Vanilla JavaScript**.
 
-## Features
+This repository was consolidated from 10 individual repositories into a single, clean workspace with an interactive dashboard as the main gateway.
 
-- Perform basic arithmetic operations:
-  - Addition (`+`)
-  - Subtraction (`-`)
-  - Multiplication (`*`)
-  - Division (`/`)
-- Responsive design for desktop and mobile devices.
-- Clear button to reset the calculation.
-- Supports real-time input and output.
+---
 
-## Technologies Used
+## 🎨 Interactive Dashboard
 
-- **HTML**: Structure of the calculator interface.
-- **CSS**: Styling for the layout and design.
-- **JavaScript**: Logic for performing calculations and handling user interactions.
+The repository features a premium glassmorphic landing page (`index.html`) that serves as a central launcher. You can:
+- **Search & Filter** through projects dynamically in real-time.
+- **Categorize** projects by type (Utilities, Games, Visuals).
+- **Directly Launch** any application or view its specific documentation.
 
-## Getting Started
+---
 
-Follow these steps to run the project locally:
+## 📂 Project Directory
 
-### Prerequisites
+Here are the 10 mini-projects included in this hub:
 
-- A modern web browser (e.g., Chrome, Firefox, Edge).
-- A code editor (e.g., VS Code) if you want to modify the code.
+| # | Project Name | Directory | Category | Description |
+|---|--------------|-----------|----------|-------------|
+| 1 | **Calculator** | [`/calculator`](file:///home/harish/workspace/personal/webdev-toys/calculator) | Utility | Clean grid calculator supporting basic arithmetic operations. |
+| 2 | **Weather Forecast** | [`/weather-app`](file:///home/harish/workspace/personal/webdev-toys/weather-app) | Utility | Real-time weather reporting showing conditions in searched cities. |
+| 3 | **Image Slider** | [`/image-slider`](file:///home/harish/workspace/personal/webdev-toys/image-slider) | Visual | A smooth, responsive slider with transition animations. |
+| 4 | **Digital Clock** | [`/digital-clock`](file:///home/harish/workspace/personal/webdev-toys/digital-clock) | Visual | Neon glowing digital clock displaying real-time hours, minutes, and seconds. |
+| 5 | **Stopwatch** | [`/stopwatch`](file:///home/harish/workspace/personal/webdev-toys/stopwatch) | Utility | Accurate digital stopwatch with splits, laps, pause, and reset. |
+| 6 | **Password Generator** | [`/password-generator`](file:///home/harish/workspace/personal/webdev-toys/password-generator) | Utility | Customizable password generator using secure client-side characters. |
+| 7 | **Rock Paper Scissors** | [`/rock-paper-scissors`](file:///home/harish/workspace/personal/webdev-toys/rock-paper-scissors) | Game | Play the classic hand game against the CPU, keeping track of scores. |
+| 8 | **Temp Converter** | [`/temperature-converter`](file:///home/harish/workspace/personal/webdev-toys/temperature-converter) | Utility | Conversions between Celsius, Fahrenheit, and Kelvin in real-time. |
+| 9 | **Dice Roller** | [`/dice-roller`](file:///home/harish/workspace/personal/webdev-toys/dice-roller) | Game | Virtual dice-rolling simulation with total calculation and image assets. |
+| 10 | **Simple Counter** | [`/counter`](file:///home/harish/workspace/personal/webdev-toys/counter) | Utility | Simple numerical counter showing addition, subtraction, and reset rules. |
 
-### Installation
+---
 
-1. Clone this repository or download the ZIP file.
-2. Extract the files to a local directory.
-3. Open the `calc.html` file in your web browser.
+## 🛠️ Technology Stack
+- **HTML5**: Semantic tags, clean structure.
+- **CSS3**: Variables, Flexbox, CSS Grid, Glassmorphism, animations, responsive layout.
+- **Vanilla JavaScript**: DOM Manipulation, Event Listeners, State updates, API connections.
+- **Lucide Icons**: SVG icons.
 
-### Usage
+---
 
-1. Launch the calculator by opening the `calc.html` file.
-2. Use the on-screen buttons to perform calculations.
-3. Click the "C" button to clear the current input.
+## 🚀 Getting Started
 
-## File Structure
+To run these projects locally, simply open `index.html` at the root of the workspace in your browser, or start a local dev server:
 
+```bash
+# Using Python's built-in HTTP server
+python3 -m http.server 8000
 ```
-project-directory/
-├── calc.html      # Main HTML file
-├── calc.css       # Stylesheet for the calculator
-└── calc.js       # JavaScript file with calculator logic
-```
+Then open `http://localhost:8000` in your web browser.
 
-## Customization
+---
 
-You can customize the project by editing the following files:
-
-- **HTML (calc.html)**: Modify the calculator layout or add new buttons.
-- **CSS (calc.css)**: Change colors, fonts, or button styles.
-- **JavaScript (calc.js)**: Add new functionality or improve the calculation logic.
+*Consolidated and optimized by Antigravity.*
