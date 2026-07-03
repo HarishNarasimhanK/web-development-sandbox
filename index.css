@@ -1,15 +1,14 @@
-/* Simple Carousel CSS */
+/* Minimalist Index Stylesheet */
 
 :root {
-    --bg-color: #0f1015;
-    --card-bg: #161822;
-    --text-main: #f3f4f6;
-    --text-sub: #9ca3af;
+    --bg-color: #0d0e12;
+    --card-bg: #14161d;
+    --text-primary: #f3f4f6;
+    --text-secondary: #8a8d98;
     --accent: #8b5cf6;
-    --accent-hover: #a78bfa;
-    --border: rgba(255, 255, 255, 0.08);
+    --border: rgba(255, 255, 255, 0.05);
     --font: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
-    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition: all 0.2s ease-in-out;
 }
 
 * {
@@ -20,24 +19,22 @@
 
 body {
     background-color: var(--bg-color);
-    color: var(--text-main);
+    color: var(--text-primary);
     font-family: var(--font);
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
-    overflow-x: hidden;
+    padding: 2rem 1rem;
 }
 
-.app-container {
+.container {
     width: 100%;
-    max-width: 800px;
-    padding: 2rem;
+    max-width: 600px;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    gap: 2rem;
-    animation: fadeIn 0.8s ease-out;
+    gap: 2.5rem;
+    animation: fadeIn 0.6s ease-out;
 }
 
 /* Header */
@@ -46,185 +43,87 @@ body {
 }
 
 .title {
-    font-size: 2.5rem;
+    font-size: 2.25rem;
     font-weight: 700;
     margin-bottom: 0.5rem;
 }
 
 .title span {
-    background: linear-gradient(135deg, #a78bfa, #f472b6);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: var(--accent);
 }
 
 .subtitle {
-    color: var(--text-sub);
-    font-size: 1rem;
-    max-width: 500px;
+    color: var(--text-secondary);
+    font-size: 0.95rem;
 }
 
-/* Carousel Section */
-.carousel-section {
-    width: 100%;
+/* Project List */
+.project-list {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    gap: 1.5rem;
+    gap: 0.75rem;
 }
 
-.carousel-container {
-    width: 100%;
+.project-item {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    gap: 1rem;
-}
-
-.carousel-viewport {
-    flex-grow: 1;
-    overflow: hidden;
-    border-radius: 16px;
-    background-color: var(--card-bg);
-    border: 1px solid var(--border);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-}
-
-.carousel-track {
-    display: flex;
-    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-    width: 100%;
-}
-
-.carousel-slide {
-    flex: 0 0 100%;
-    width: 100%;
-    padding: 2.5rem;
-    opacity: 0.3;
-    transition: opacity 0.5s ease;
-}
-
-.carousel-slide.active {
-    opacity: 1;
-}
-
-/* Project Card */
-.project-card {
-    display: flex;
-    flex-direction: column;
     gap: 1.25rem;
-    position: relative;
+    padding: 1.25rem 1.5rem;
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    text-decoration: none;
+    color: inherit;
+    transition: var(--transition);
+}
+
+.project-item:hover {
+    border-color: var(--accent);
+    transform: translateY(-2px);
+    background: #191c25;
 }
 
 .project-num {
-    font-size: 0.875rem;
+    font-size: 0.9rem;
     font-weight: 600;
     color: var(--accent);
-    letter-spacing: 0.05em;
 }
 
-.project-title {
-    font-size: 1.75rem;
-    font-weight: 700;
+.project-info {
+    flex-grow: 1;
+}
+
+.project-name {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
 }
 
 .project-desc {
-    color: var(--text-sub);
-    font-size: 1rem;
-    line-height: 1.6;
-    min-height: 4.8rem;
+    font-size: 0.875rem;
+    color: var(--text-secondary);
 }
 
-.project-tags {
-    display: flex;
-    gap: 0.5rem;
+.arrow {
+    font-size: 1.25rem;
+    color: var(--text-secondary);
+    transition: var(--transition);
 }
 
-.project-tags span {
-    font-size: 0.75rem;
-    background: rgba(255, 255, 255, 0.03);
-    border: 1px solid rgba(255, 255, 255, 0.05);
-    padding: 0.25rem 0.5rem;
-    border-radius: 6px;
-    color: var(--text-sub);
-}
-
-.launch-link {
-    align-self: flex-start;
+.project-item:hover .arrow {
     color: var(--accent);
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 1rem;
-    transition: var(--transition);
-    border-bottom: 1px solid transparent;
-    padding-bottom: 2px;
-}
-
-.launch-link:hover {
-    color: var(--accent-hover);
-    border-color: var(--accent-hover);
-    transform: translateX(3px);
-}
-
-/* Nav Buttons */
-.nav-btn {
-    background: rgba(255, 255, 255, 0.03);
-    border: 1px solid var(--border);
-    color: var(--text-main);
-    width: 3rem;
-    height: 3rem;
-    border-radius: 50%;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.2rem;
-    transition: var(--transition);
-    flex-shrink: 0;
-}
-
-.nav-btn:hover {
-    background: var(--accent);
-    border-color: transparent;
-    color: white;
-    box-shadow: 0 0 15px rgba(139, 92, 246, 0.4);
-}
-
-.nav-btn:active {
-    transform: scale(0.95);
-}
-
-/* Indicators */
-.indicators {
-    display: flex;
-    gap: 0.5rem;
-}
-
-.indicator-dot {
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    background: rgba(255, 255, 255, 0.15);
-    border: none;
-    cursor: pointer;
-    transition: var(--transition);
-}
-
-.indicator-dot.active {
-    background: var(--accent);
-    width: 24px;
-    border-radius: 4px;
+    transform: translateX(4px);
 }
 
 /* Footer */
 .footer {
     text-align: center;
     font-size: 0.85rem;
-    color: var(--text-sub);
-    margin-top: 1rem;
+    color: var(--text-secondary);
 }
 
 .footer a {
-    color: var(--text-main);
+    color: var(--text-primary);
     text-decoration: none;
     transition: var(--transition);
 }
@@ -233,35 +132,14 @@ body {
     color: var(--accent);
 }
 
-/* Animations */
+/* Fade-in Animation */
 @keyframes fadeIn {
     from {
         opacity: 0;
-        transform: translateY(15px);
+        transform: translateY(10px);
     }
     to {
         opacity: 1;
         transform: translateY(0);
-    }
-}
-
-/* Responsiveness */
-@media (max-width: 600px) {
-    .app-container {
-        padding: 1rem;
-    }
-    
-    .title {
-        font-size: 2rem;
-    }
-    
-    .carousel-slide {
-        padding: 1.5rem;
-    }
-    
-    .nav-btn {
-        width: 2.5rem;
-        height: 2.5rem;
-        font-size: 1rem;
     }
 }

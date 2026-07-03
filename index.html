@@ -3,247 +3,116 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Web Dev Sandbox | Practice Projects</title>
+    <title>Web Dev Sandbox</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
-    <div class="app-container">
+    <div class="container">
         <header class="header">
             <h1 class="title">Web Dev <span>Sandbox</span></h1>
-            <p class="subtitle">A simple carousel showcasing my first 10 practice projects built with HTML, CSS, and JavaScript.</p>
+            <p class="subtitle">A simple index of my 10 early practice projects built with HTML, CSS, and JavaScript.</p>
         </header>
 
-        <main class="carousel-section">
-            <div class="carousel-container">
-                <!-- Navigation Arrows -->
-                <button class="nav-btn prev-btn" id="prevBtn" aria-label="Previous Project">&lt;</button>
-                
-                <div class="carousel-viewport">
-                    <div class="carousel-track" id="carouselTrack">
-                        
-                        <!-- Project 1: Calculator -->
-                        <div class="carousel-slide">
-                            <div class="project-card">
-                                <span class="project-num">01 / 10</span>
-                                <h2 class="project-title">Calculator</h2>
-                                <p class="project-desc">A basic grid-based calculator that performs standard arithmetic functions in real-time.</p>
-                                <div class="project-tags">
-                                    <span>HTML</span><span>CSS</span><span>JavaScript</span>
-                                </div>
-                                <a href="calculator/calc.html" class="launch-link">Launch App &rarr;</a>
-                            </div>
-                        </div>
-
-                        <!-- Project 2: Weather Forecast -->
-                        <div class="carousel-slide">
-                            <div class="project-card">
-                                <span class="project-num">02 / 10</span>
-                                <h2 class="project-title">Weather Forecast</h2>
-                                <p class="project-desc">A weather application connecting to a remote API to show temperature and atmospheric conditions.</p>
-                                <div class="project-tags">
-                                    <span>HTML</span><span>CSS</span><span>Fetch API</span>
-                                </div>
-                                <a href="weather-app/weather.html" class="launch-link">Launch App &rarr;</a>
-                            </div>
-                        </div>
-
-                        <!-- Project 3: Image Slider -->
-                        <div class="carousel-slide">
-                            <div class="project-card">
-                                <span class="project-num">03 / 10</span>
-                                <h2 class="project-title">Image Slider</h2>
-                                <p class="project-desc">An interactive sliding image gallery containing previous and next navigation controls.</p>
-                                <div class="project-tags">
-                                    <span>HTML</span><span>CSS</span><span>JavaScript</span>
-                                </div>
-                                <a href="image-slider/imageSlider.html" class="launch-link">Launch App &rarr;</a>
-                            </div>
-                        </div>
-
-                        <!-- Project 4: Digital Clock -->
-                        <div class="carousel-slide">
-                            <div class="project-card">
-                                <span class="project-num">04 / 10</span>
-                                <h2 class="project-title">Digital Clock</h2>
-                                <p class="project-desc">A clean, neon-lit digital clock displaying live time based on system clock intervals.</p>
-                                <div class="project-tags">
-                                    <span>HTML</span><span>CSS</span><span>Intervals</span>
-                                </div>
-                                <a href="digital-clock/digitalclock.html" class="launch-link">Launch App &rarr;</a>
-                            </div>
-                        </div>
-
-                        <!-- Project 5: Stopwatch -->
-                        <div class="carousel-slide">
-                            <div class="project-card">
-                                <span class="project-num">05 / 10</span>
-                                <h2 class="project-title">Stopwatch</h2>
-                                <p class="project-desc">A timer app with precise lap timing, pausing, and reset operations for tracking time.</p>
-                                <div class="project-tags">
-                                    <span>HTML</span><span>CSS</span><span>Timer JS</span>
-                                </div>
-                                <a href="stopwatch/stopwatch.html" class="launch-link">Launch App &rarr;</a>
-                            </div>
-                        </div>
-
-                        <!-- Project 6: Password Generator -->
-                        <div class="carousel-slide">
-                            <div class="project-card">
-                                <span class="project-num">06 / 10</span>
-                                <h2 class="project-title">Password Generator</h2>
-                                <p class="project-desc">Generate secure custom passwords using various options for numbers, symbols, and letters.</p>
-                                <div class="project-tags">
-                                    <span>HTML</span><span>CSS</span><span>Logic</span>
-                                </div>
-                                <a href="password-generator/pwdgenerator.html" class="launch-link">Launch App &rarr;</a>
-                            </div>
-                        </div>
-
-                        <!-- Project 7: Rock Paper Scissors -->
-                        <div class="carousel-slide">
-                            <div class="project-card">
-                                <span class="project-num">07 / 10</span>
-                                <h2 class="project-title">Rock Paper Scissors</h2>
-                                <p class="project-desc">Play the classic rock-paper-scissors hand game against a basic computer opponent.</p>
-                                <div class="project-tags">
-                                    <span>HTML</span><span>CSS</span><span>Game Loop</span>
-                                </div>
-                                <a href="rock-paper-scissors/rps.html" class="launch-link">Launch App &rarr;</a>
-                            </div>
-                        </div>
-
-                        <!-- Project 8: Temp Converter -->
-                        <div class="carousel-slide">
-                            <div class="project-card">
-                                <span class="project-num">08 / 10</span>
-                                <h2 class="project-title">Temp Converter</h2>
-                                <p class="project-desc">Convert temperature measurements dynamically between Celsius, Fahrenheit, and Kelvin.</p>
-                                <div class="project-tags">
-                                    <span>HTML</span><span>CSS</span><span>Math</span>
-                                </div>
-                                <a href="temperature-converter/temp.html" class="launch-link">Launch App &rarr;</a>
-                            </div>
-                        </div>
-
-                        <!-- Project 9: Dice Roller -->
-                        <div class="carousel-slide">
-                            <div class="project-card">
-                                <span class="project-num">09 / 10</span>
-                                <h2 class="project-title">Dice Roller</h2>
-                                <p class="project-desc">Simulate rolling multiple standard dice, rendering visual dice images and total values.</p>
-                                <div class="project-tags">
-                                    <span>HTML</span><span>CSS</span><span>Randomizer</span>
-                                </div>
-                                <a href="dice-roller/dice.html" class="launch-link">Launch App &rarr;</a>
-                            </div>
-                        </div>
-
-                        <!-- Project 10: Simple Counter -->
-                        <div class="carousel-slide">
-                            <div class="project-card">
-                                <span class="project-num">10 / 10</span>
-                                <h2 class="project-title">Simple Counter</h2>
-                                <p class="project-desc">A simple visual counter with responsive increase, decrease, and reset buttons.</p>
-                                <div class="project-tags">
-                                    <span>HTML</span><span>CSS</span><span>State</span>
-                                </div>
-                                <a href="counter/counter.html" class="launch-link">Launch App &rarr;</a>
-                            </div>
-                        </div>
-
-                    </div>
+        <main class="project-list">
+            
+            <a href="calculator/calc.html" class="project-item">
+                <span class="project-num">01</span>
+                <div class="project-info">
+                    <h2 class="project-name">Calculator</h2>
+                    <p class="project-desc">Basic grid calculator for arithmetic operations.</p>
                 </div>
+                <span class="arrow">&rarr;</span>
+            </a>
 
-                <button class="nav-btn next-btn" id="nextBtn" aria-label="Next Project">&gt;</button>
-            </div>
+            <a href="weather-app/weather.html" class="project-item">
+                <span class="project-num">02</span>
+                <div class="project-info">
+                    <h2 class="project-name">Weather Forecast</h2>
+                    <p class="project-desc">App displaying temperature and conditions via a weather API.</p>
+                </div>
+                <span class="arrow">&rarr;</span>
+            </a>
 
-            <!-- Indicators -->
-            <div class="indicators" id="indicators">
-                <!-- Generated dynamically via JS -->
-            </div>
+            <a href="image-slider/imageSlider.html" class="project-item">
+                <span class="project-num">03</span>
+                <div class="project-info">
+                    <h2 class="project-name">Image Slider</h2>
+                    <p class="project-desc">Simple slider gallery with navigation controls.</p>
+                </div>
+                <span class="arrow">&rarr;</span>
+            </a>
+
+            <a href="digital-clock/digitalclock.html" class="project-item">
+                <span class="project-num">04</span>
+                <div class="project-info">
+                    <h2 class="project-name">Digital Clock</h2>
+                    <p class="project-desc">Interval-based clock with a neon glowing display.</p>
+                </div>
+                <span class="arrow">&rarr;</span>
+            </a>
+
+            <a href="stopwatch/stopwatch.html" class="project-item">
+                <span class="project-num">05</span>
+                <div class="project-info">
+                    <h2 class="project-name">Stopwatch</h2>
+                    <p class="project-desc">Timer featuring lap logging, pausing, and reset functions.</p>
+                </div>
+                <span class="arrow">&rarr;</span>
+            </a>
+
+            <a href="password-generator/pwdgenerator.html" class="project-item">
+                <span class="project-num">06</span>
+                <div class="project-info">
+                    <h2 class="project-name">Password Generator</h2>
+                    <p class="project-desc">Creates secure passwords based on customizable criteria.</p>
+                </div>
+                <span class="arrow">&rarr;</span>
+            </a>
+
+            <a href="rock-paper-scissors/rps.html" class="project-item">
+                <span class="project-num">07</span>
+                <div class="project-info">
+                    <h2 class="project-name">Rock Paper Scissors</h2>
+                    <p class="project-desc">Classic hand game against a CPU opponent.</p>
+                </div>
+                <span class="arrow">&rarr;</span>
+            </a>
+
+            <a href="temperature-converter/temp.html" class="project-item">
+                <span class="project-num">08</span>
+                <div class="project-info">
+                    <h2 class="project-name">Temperature Converter</h2>
+                    <p class="project-desc">Converts values between Celsius, Fahrenheit, and Kelvin.</p>
+                </div>
+                <span class="arrow">&rarr;</span>
+            </a>
+
+            <a href="dice-roller/dice.html" class="project-item">
+                <span class="project-num">09</span>
+                <div class="project-info">
+                    <h2 class="project-name">Dice Roller</h2>
+                    <p class="project-desc">Simulates rolling multiple standard dice.</p>
+                </div>
+                <span class="arrow">&rarr;</span>
+            </a>
+
+            <a href="counter/counter.html" class="project-item">
+                <span class="project-num">10</span>
+                <div class="project-info">
+                    <h2 class="project-name">Simple Counter</h2>
+                    <p class="project-desc">Basic number counter with increment and decrement features.</p>
+                </div>
+                <span class="arrow">&rarr;</span>
+            </a>
+
         </main>
 
         <footer class="footer">
             <p>Made by <a href="https://github.com/HarishNarasimhanK" target="_blank">Harish Narasimhan K</a></p>
         </footer>
     </div>
-
-    <!-- Carousel Logic -->
-    <script>
-        const track = document.getElementById('carouselTrack');
-        const slides = Array.from(track.children);
-        const nextBtn = document.getElementById('nextBtn');
-        const prevBtn = document.getElementById('prevBtn');
-        const indicatorsContainer = document.getElementById('indicators');
-        
-        let currentIndex = 0;
-
-        // Generate indicators
-        slides.forEach((_, index) => {
-            const dot = document.createElement('button');
-            dot.classList.add('indicator-dot');
-            if (index === 0) dot.classList.add('active');
-            dot.setAttribute('aria-label', `Go to slide ${index + 1}`);
-            dot.addEventListener('click', () => {
-                goToSlide(index);
-            });
-            indicatorsContainer.appendChild(dot);
-        });
-
-        const dots = Array.from(indicatorsContainer.children);
-
-        function updateCarousel() {
-            // Shift the track
-            track.style.transform = `translateX(-${currentIndex * 100}%)`;
-            
-            // Update active states for slides
-            slides.forEach((slide, i) => {
-                if (i === currentIndex) {
-                    slide.classList.add('active');
-                } else {
-                    slide.classList.remove('active');
-                }
-            });
-
-            // Update dots
-            dots.forEach((dot, i) => {
-                if (i === currentIndex) {
-                    dot.classList.add('active');
-                } else {
-                    dot.classList.remove('active');
-                }
-            });
-        }
-
-        function goToSlide(index) {
-            currentIndex = index;
-            updateCarousel();
-        }
-
-        nextBtn.addEventListener('click', () => {
-            currentIndex = (currentIndex + 1) % slides.length;
-            updateCarousel();
-        });
-
-        prevBtn.addEventListener('click', () => {
-            currentIndex = (currentIndex - 1 + slides.length) % slides.length;
-            updateCarousel();
-        });
-
-        // Key navigation
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'ArrowRight') {
-                nextBtn.click();
-            } else if (e.key === 'ArrowLeft') {
-                prevBtn.click();
-            }
-        });
-
-        // Initialize
-        updateCarousel();
-    </script>
 </body>
 </html>
